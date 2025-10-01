@@ -2,63 +2,73 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [Header("Ajustes de movimiento")]
     public float speed = 5f;
     public float jumpForce;
 
-    private Rigidbody2D Rigidbody2D;
+    private Rigidbody2D RB2D;
     private Animator animator;
-    private float Horizontal;
-    private float Vertical;
+
+    private float horizontal;
     private bool grounded;
 
     void Start()
     {
-        Rigidbody2D = GetComponent<Rigidbody2D>();
+        RB2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        
     }
+
     void Update()
     {
-        Horizontal = Input.GetAxis("Horizontal") * Time.deltaTime;
-        Vertical = Input.GetAxis("Vertical");
+        // Captura de inputs
+        horizontal = Input.GetAxis("Horizontal");
 
-        if (Horizontal < 0.0f) transform.localScale = new Vector3(-1, 1, 1);
-        else if (Horizontal > 0.0f) transform.localScale = new Vector3(1, 1, 1);
+        // Dirección del sprite
+        if (horizontal < 0.0f) transform.localScale = new Vector3(-1, 1, 1);
+        else if (horizontal > 0.0f) transform.localScale = new Vector3(1, 1, 1);
 
-        animator.SetBool("Running", Horizontal != 0.0f);
+        // Animaciones
+        animator.SetBool("Running", horizontal != 0.0f);
         animator.SetBool("Jumping", !grounded);
 
-        // Movimiento
-        Vector3 movement = new Vector3(Horizontal, 0.0f, Vertical);
-        //transform.Translate(movement * speed * Time.deltaTime, Space.World);
-        transform.position += movement * speed * Time.deltaTime;
-
-        // Dibuja el raycast en la vista Scene
-        Debug.DrawLine(transform.position, transform.position + Vector3.down * 0.5f, Color.red);
-
-        // Comprobar suelo
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 0.2f);
-        grounded = hit.collider != null;
+        // Raycast para detectar suelo
+        Debug.DrawRay(transform.position, Vector3.down * 6f, Color.red);
+        Gizmos.color = Color.red;
 
 
-        if (Input.GetKeyDown(KeyCode.W) && grounded == true)
+        if (Physics2D.Raycast(transform.position, Vector2.down, 1.8f))
         {
-            jump();
+            grounded = true;
+        }
+        else
+        {
+            grounded = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        // Salto
+        if (Input.GetKeyDown(KeyCode.W) && grounded)
         {
-            Application.Quit();
+            Jump();
         }
 
-    }
-    private void jump()
-    {
-        Rigidbody2D.AddForce(new Vector2(0, 3), ForceMode2D.Impulse);
+        // Restart
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+        }
+
+
     }
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
-        Rigidbody2D.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);      
+        // Movimiento horizontal usando físicas
+        RB2D.linearVelocity = new Vector2(horizontal * speed, RB2D.linearVelocity.y);        
+    }
+
+    private void Jump()
+    {
+        RB2D.AddForce(Vector2.up*jumpForce);
     }
 }
+

@@ -8,7 +8,7 @@ public class Camera : MonoBehaviour
     {
         Vector3 position = transform.position;
         position.x = player.transform.position.x;
-        position.y = player.transform.position.y;
+        position.y = player.transform.position.y+0.5f;
         transform.position = position;
     }
 }
