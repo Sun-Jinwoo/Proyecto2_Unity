@@ -162,6 +162,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   sePuedeMoverEnElAire: 1
+  saltoSonido: {fileID: 8300000, guid: a89fb5d0a13c9594d9417585823b1513, type: 3}
 --- !u!1 &8716748746379046538
 GameObject:
   m_ObjectHideFlags: 0

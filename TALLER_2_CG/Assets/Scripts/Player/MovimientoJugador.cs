@@ -21,6 +21,8 @@ public class MovimientoJugador : MonoBehaviour
     [SerializeField] private Vector2 dimensionesCaja;
     [SerializeField] private LayerMask capasSalto;
     [SerializeField] private bool sePuedeMoverEnElAire;
+     [SerializeField] private AudioClip saltoSonido;
+    
     private bool enSuelo;
     private bool entradaSalto;
     private void Update()
@@ -58,6 +60,7 @@ public class MovimientoJugador : MonoBehaviour
     {
         entradaSalto = false;
         rb2D.AddForce(new Vector2(0, fuerzaSalto), ForceMode2D.Impulse);
+        ControlSonido.instancia.ReproducirSonido(saltoSonido);
     }
 
     private void ControlarMovimientoHorizontal()
