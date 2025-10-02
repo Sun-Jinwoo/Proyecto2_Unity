@@ -3,9 +3,13 @@ using UnityEngine;
 
 public class MovimientoJugador : MonoBehaviour
 {
+    private const string STRING_VELOCIDAD_HORIZONTAL = "VelocidadHorizontal";
+    private const string STRING_EN_SUELO = "enSuelo";
+    private const string STRING_VELOCIDAD_VERTICAL = "VelocidadVertical";
+
     [Header("Referencias")]
     [SerializeField] private Rigidbody2D rb2D;
-
+    [SerializeField] private Animator animator;
     [Header("Movimiento Horizontal")]
     [SerializeField] private float velocidadMovimiento;
     private float entradaHorizontal;
@@ -29,6 +33,7 @@ public class MovimientoJugador : MonoBehaviour
             entradaSalto = true;
         }
         enSuelo = Physics2D.OverlapBox(controladorSuelo.position, dimensionesCaja, 0f, capasSalto);
+        ControlarAnimaciones();
     }
 
 
@@ -79,6 +84,12 @@ public class MovimientoJugador : MonoBehaviour
         return transform.localScale.x == 1;
     }
 
+    private void ControlarAnimaciones()
+    {
+        animator.SetFloat(STRING_VELOCIDAD_HORIZONTAL, Mathf.Abs(rb2D.linearVelocity.x));
+        animator.SetFloat(STRING_VELOCIDAD_VERTICAL, Mathf.Sign(rb2D.linearVelocity.y));
+        animator.SetBool(STRING_EN_SUELO, enSuelo);
+    }
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.yellow;
