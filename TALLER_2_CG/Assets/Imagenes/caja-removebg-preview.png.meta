@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      caja-removebg-preview_0: 3306059612648740417
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
