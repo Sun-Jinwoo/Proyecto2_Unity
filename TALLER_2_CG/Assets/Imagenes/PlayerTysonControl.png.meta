@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      PlayerTysonControl_0: 1277027615179178933
+      PlayerTysonControl_1: 5530892157020205462
+      PlayerTysonControl_2: -2738394798524150666
+      PlayerTysonControl_3: 5956452327511548199
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
