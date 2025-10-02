@@ -2,17 +2,19 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
-  tags: []
+  serializedVersion: 3
+  tags:
+  - Ground
+  - Block
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Suelo
   - Water
   - UI
-  - 
-  - 
+  - Jugador
+  - Enemigo
   - 
   - 
   - 
@@ -41,3 +43,8 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: fondo
+    uniqueID: 216016109
+    locked: 0
+  m_RenderingLayers:
+  - Default
