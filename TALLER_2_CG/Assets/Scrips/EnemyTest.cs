@@ -10,7 +10,7 @@ public class EnemyTest : MonoBehaviour
 
     [Header("Ajustes de enemigo")]
     public float speed = 2f;             // Velocidad de patrulla
-    public float detectionRange = 3f;    // Rango para detectar al jugador
+    public float detectionRange = 2f;    // Rango para detectar al jugador
     public int damage = 1;               // Daño que inflige al jugador
     public int push = 10;               // Fuerza de empuje al recibir daño
     public int puntosOtorgados = 100;
@@ -25,7 +25,7 @@ public class EnemyTest : MonoBehaviour
     private bool takeD = false;
 
     private int health = 5;
-    private int enemyhealth = 3;
+    private int enemyhealth = 2;
 
     private void Start()
     {
@@ -39,23 +39,25 @@ public class EnemyTest : MonoBehaviour
         if (isDead) return;
 
         Vector3 direction = player.transform.position - transform.position;
-        if (direction.x >= 0.0f) transform.localScale = new Vector3(10f, 10f, 10f);
-        else transform.localScale = new Vector3(-10f, 10f, 10f);
+        if (direction.x >= 0.0f) transform.localScale = new Vector3(5f, 5f, 5f);
+        else transform.localScale = new Vector3(-5f, 5f, 5f);
 
         Gizmos.color = Color.green;
-        Debug.DrawRay(transform.position, Vector3.right * 1.5f);
-        Debug.DrawRay(transform.position, Vector3.left * 1.5f);
+        Debug.DrawRay(transform.position, Vector3.right * 1f);
+        Debug.DrawRay(transform.position, Vector3.left * 1f);
 
         float distance = Vector2.Distance(transform.position, player.transform.position);
         detectingPlayer = distance <= detectionRange;
         animator.SetBool("Run", RB2D.linearVelocity.x != 0);
+        //  animator.SetTrigger("Hit", EnemyDamage);
+
 
         if (detectingPlayer)
         {
             AttackToPlayer();
         }
 
-        float attackRange = 1.5f;
+        float attackRange = 1f;
         if (distance < attackRange)
         {
             AttackToEnemy();
@@ -72,6 +74,7 @@ public class EnemyTest : MonoBehaviour
         if (playerScript != null)
         {
             playerScript.TakeDamage(damage, transform.position.x);
+            animator.SetTrigger("Attack");
         }
     }
     

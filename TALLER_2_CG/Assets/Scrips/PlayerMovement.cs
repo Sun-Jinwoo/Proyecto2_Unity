@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool takeD = false;
     public float dirGolpe;
-    public int health = 5;
+    public int health = 7;
     public int damage = 1;
 
     void Start()
@@ -33,8 +33,8 @@ public class PlayerMovement : MonoBehaviour
         horizontal = Input.GetAxis("Horizontal");
 
         // Dirección del sprite
-        if (horizontal < 0.0f) transform.localScale = new Vector3(-1, 1, 1);
-        else if (horizontal > 0.0f) transform.localScale = new Vector3(1, 1, 1);
+        if (horizontal < 0.0f) transform.localScale = new Vector3(-0.5f, 0.5f, 0.5f);
+        else if (horizontal > 0.0f) transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
 
         // Animaciones
         animator.SetBool("Running", horizontal != 0.0f);
@@ -83,6 +83,7 @@ public class PlayerMovement : MonoBehaviour
     {
         Debug.Log("Player Attacks!");
         attacking = true;
+        
         Invoke("stopAttack", 0.7f);
     }
     private void stopAttack()
@@ -106,6 +107,7 @@ public class PlayerMovement : MonoBehaviour
             RB2D.AddForce(push * 5f, ForceMode2D.Impulse);
 
             //animator.SetTrigger("Hurt");
+            
             if (health <= 0)
             {
                 Die();
