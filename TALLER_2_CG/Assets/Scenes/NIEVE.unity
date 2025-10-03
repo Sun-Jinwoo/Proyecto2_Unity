@@ -1123,6 +1123,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   dirGolpe: 0
+  health: 5
+  damage: 1
 --- !u!70 &856120437
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -61923,7 +61925,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 993097056}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -63739,9 +63741,9 @@ GameObject:
   - component: {fileID: 2063717812}
   - component: {fileID: 2063717811}
   - component: {fileID: 2063717810}
-  - component: {fileID: 2063717813}
   - component: {fileID: 2063717815}
   - component: {fileID: 2063717814}
+  - component: {fileID: 2063717816}
   m_Layer: 0
   m_Name: Enemigos
   m_TagString: Untagged
@@ -63841,19 +63843,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2063717813
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2063717809}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d4562fc065de9642a28149186b663c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 856120430}
 --- !u!70 &2063717814
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -63918,6 +63907,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &2063717816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063717809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c76ff18d3663c1c44aaf4a23a0fafe67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 856120430}
+  speed: 2
+  detectionRange: 3
+  damage: 1
+  push: 100
+  puntosOtorgados: 100
+  RB2D: {fileID: 0}
 --- !u!1 &2123042473
 GameObject:
   m_ObjectHideFlags: 0
