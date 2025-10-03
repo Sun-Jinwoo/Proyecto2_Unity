@@ -30,6 +30,8 @@ public class GameControllerBosque : MonoBehaviour
         textoTiempo.text = "Tiempo: " + tiempo.ToString("F1");
     }
 
+
+
     public void AgregarItem(string nombre, int puntos)
     {
         items.Add(nombre);
