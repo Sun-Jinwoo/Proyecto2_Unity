@@ -68,6 +68,7 @@
     <Compile Include="Assets\SpriteSheets\Low_Swordman\Demo\Scripts\PlayerController.cs" />
     <Compile Include="Assets\SpriteSheets\Low_Swordman\Demo\Scripts\Demo_GM.cs" />
     <Compile Include="Assets\Scripts\ControlSonido.cs" />
+    <Compile Include="Assets\Scripts\Player\CombateJugador.cs" />
     <Compile Include="Assets\SpriteSheets\Low_Swordman\Demo\Scripts\CameraController.cs" />
     <Compile Include="Assets\Asset FTTGR\Scripts\PlayerAttack.cs" />
     <Compile Include="Assets\Scripts\Menu\MenuOptions.cs" />
@@ -75,23 +76,33 @@
     <Compile Include="Assets\Scripts\Item\AutoDestruir.cs" />
     <Compile Include="Assets\Scripts\RecoleccionFruta.cs" />
     <Compile Include="Assets\Asset FTTGR\Scripts\Projectile.cs" />
+    <Compile Include="Assets\Scripts\Enemigo\EstadosEnemigo.cs" />
     <Compile Include="Assets\SpriteSheets\Low_Swordman\Demo\Scripts\GroundSensor.cs" />
     <Compile Include="Assets\Scrips\PlayerMovement.cs" />
     <Compile Include="Assets\Scrips\Enemys.cs" />
     <Compile Include="Assets\SpriteSheets\Low_Swordman\Demo\Scripts\Swordman.cs" />
+    <Compile Include="Assets\Scripts\Player\Ataque.cs" />
     <Compile Include="Assets\Scripts\Menu\MenuInicial.cs" />
     <Compile Include="Assets\Scripts\Camara\CamaraController.cs" />
     <Compile Include="Assets\Scripts\GameControllerBosque.cs" />
+    <Compile Include="Assets\Scripts\Player\TipoDeAtaque.cs" />
+    <Compile Include="Assets\Scrips\GameManager.cs" />
     <Compile Include="Assets\Scrips\Camera.cs" />
+    <Compile Include="Assets\Scrips\Muerte.cs" />
     <Compile Include="Assets\Scripts\Camara\SeguirJugadorCamara.cs" />
     <Compile Include="Assets\Enemy Galore 1 - Pixel Art\Script\EnemyTested.cs" />
     <Compile Include="Assets\Scrips\EnemyTest.cs" />
+    <Compile Include="Assets\Scripts\IGolpeable.cs" />
     <Compile Include="Assets\Enemy Galore 1 - Pixel Art\Script\EnemySelector.cs" />
     <Compile Include="Assets\Scripts\MusicManager.cs" />
+    <Compile Include="Assets\Scripts\Player\VidaJugador.cs" />
     <Compile Include="Assets\Asset FTTGR\Scripts\Enemy.cs" />
+    <Compile Include="Assets\Scripts\Enemigo\MovimientoEnemigo.cs" />
     <Compile Include="Assets\Scripts\Item\Item.cs" />
     <Compile Include="Assets\Scripts\Player\MovimientoJugador.cs" />
     <Compile Include="Assets\Scripts\cambioMapa.cs" />
+    <Compile Include="Assets\Scripts\Objetos\LavaDamage.cs" />
+    <Compile Include="Assets\Scripts\Enemigo\VidaEnemigo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\SpriteSheets\craftpix-net-705123-free-meat-and-skin-icons\TXT\readme.txt" />
