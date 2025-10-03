@@ -33,19 +33,19 @@ public class MusicManager : MonoBehaviour
     {
         switch (scene.name)
         {
-            case "menu":
+            case "MENU":
                 CambiarMusica(musicaMenu);
                 break;
-            case "pueblo":  
+            case "PUEBLO":  
                 CambiarMusica(musicaPueblo);
                 break;
-            case "bosque":
+            case "BOSQUE":
                 CambiarMusica(musicaBosque);
                 break;
-            case "nieve":
+            case "NIEVE":
                 CambiarMusica(musicaNieve);
                 break;
-            case "lava":
+            case "LAVA":
                 CambiarMusica(musicaLava);
                 break;
 
