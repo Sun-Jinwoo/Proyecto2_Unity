@@ -66,8 +66,8 @@ public class MovimientoJugador : MonoBehaviour
     private void ControlarMovimientoHorizontal()
     {
         if (!enSuelo && !sePuedeMoverEnElAire) { return; }
-        
-            rb2D.linearVelocity = new Vector2(entradaHorizontal * velocidadMovimiento, rb2D.linearVelocity.y);
+
+        rb2D.linearVelocity = new Vector2(entradaHorizontal * velocidadMovimiento, rb2D.linearVelocity.y);
             if ((entradaHorizontal > 0 && !MirandoALaDerecha()) || (entradaHorizontal < 0 && MirandoALaDerecha()))
             {
                 Girar();

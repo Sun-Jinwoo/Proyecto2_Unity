@@ -6,6 +6,8 @@ NativeFormatImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+<<<<<<< Updated upstream
+=======
 AssetOrigin:
   serializedVersion: 1
   productId: 103349
@@ -13,3 +15,4 @@ AssetOrigin:
   packageVersion: 1.1
   assetPath: Assets/SunnyLand Artwork/Environment/Tileset/tileset-sliced_28.asset
   uploadId: 540939
+>>>>>>> Stashed changes
