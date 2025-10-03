@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2569468600428313635
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1841142533243563309}
+  m_Layer: 6
+  m_Name: ControladorInteractuar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1841142533243563309
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2569468600428313635}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.007, y: -0.076, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4970990879910563187}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4290338047140336961
 GameObject:
   m_ObjectHideFlags: 0
@@ -31,6 +62,99 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4970990879910563187}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6040191971644949352
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 244204472827805690}
+  m_Layer: 6
+  m_Name: ControladorAtaqueArriba
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &244204472827805690
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6040191971644949352}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.293, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4970990879910563187}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6663911684806994874
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5492088684467125852}
+  m_Layer: 6
+  m_Name: ControladorAtaqueDelatne
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5492088684467125852
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6663911684806994874}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.303, y: -0.269, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4970990879910563187}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7145316059647465469
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3848129335474007504}
+  m_Layer: 6
+  m_Name: ControladorAtaqueAbajo (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3848129335474007504
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7145316059647465469}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.274, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4970990879910563187}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7963374841148326481
 GameObject:
   m_ObjectHideFlags: 0
@@ -43,6 +167,8 @@ GameObject:
   - component: {fileID: 6381298640722613063}
   - component: {fileID: 9018118877901843604}
   - component: {fileID: 5502854686967795081}
+  - component: {fileID: 8408673095726872156}
+  - component: {fileID: 1473593929839929538}
   m_Layer: 6
   m_Name: Juagador
   m_TagString: Player
@@ -59,12 +185,16 @@ Transform:
   m_GameObject: {fileID: 7963374841148326481}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -49.676083, y: -2.0911834, z: 0}
+  m_LocalPosition: {x: -50.51, y: -2.18, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 912716481144486292}
   - {fileID: 279011762926608588}
+  - {fileID: 244204472827805690}
+  - {fileID: 5492088684467125852}
+  - {fileID: 3848129335474007504}
+  - {fileID: 1841142533243563309}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &6381298640722613063
@@ -154,15 +284,70 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb2D: {fileID: 6381298640722613063}
   animator: {fileID: 7511222347087298480}
-  velocidadMovimiento: 3
-  fuerzaSalto: 5
+  colisionadorJugador: {fileID: 0}
+  velocidadMovimiento: 4
+  fuerzaSalto: 8
   controladorSuelo: {fileID: 279011762926608588}
   dimensionesCaja: {x: 0.45, y: 0.15}
   capasSalto:
     serializedVersion: 2
     m_Bits: 8
   sePuedeMoverEnElAire: 1
-  saltoSonido: {fileID: 8300000, guid: a89fb5d0a13c9594d9417585823b1513, type: 3}
+--- !u!114 &8408673095726872156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7963374841148326481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57f98ffc09523d9448bf925ea485d80c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 7511222347087298480}
+  ataquesJugador:
+  - tipoDeAtaque: 0
+    nombreAtaque: Ataque Arriba
+    "cantidadDeDa\xF1o": 1
+    controladorAtaque: {fileID: 244204472827805690}
+    stringAnimacion: Ataque1
+    radioAtaque: 0.74
+    dimensionesCaja: {x: 0, y: 0}
+  - tipoDeAtaque: 1
+    nombreAtaque: Ataque frente
+    "cantidadDeDa\xF1o": 1
+    controladorAtaque: {fileID: 5492088684467125852}
+    stringAnimacion: Ataque2
+    radioAtaque: 1.52
+    dimensionesCaja: {x: 1.54, y: 0.63}
+  - tipoDeAtaque: 0
+    nombreAtaque: Ataque Abajo
+    "cantidadDeDa\xF1o": 2
+    controladorAtaque: {fileID: 3848129335474007504}
+    stringAnimacion: Ataque3
+    radioAtaque: 0.81
+    dimensionesCaja: {x: 0, y: 0}
+  tiempoEntreAtaques: 1
+  tiempoUltimoAtaque: 1
+  ventanaDeCombo: 1
+  indiceCombo: 5
+  tiempoEntreCombos: 2
+  tiempoBufferEntrada: 0.25
+--- !u!114 &1473593929839929538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7963374841148326481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12c2268102b21cf4fb15ff1872112729, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vidaMaxima: 100
+  vidaActual: 0
 --- !u!1 &8716748746379046538
 GameObject:
   m_ObjectHideFlags: 0
@@ -293,7 +478,7 @@ Animator:
   m_GameObject: {fileID: 9215644416921358285}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 49628cb2cc8201b45b71deab0427d85e, type: 2}
+  m_Controller: {fileID: 9100000, guid: c08b0053cfd9a0c47bb5600885f7506b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

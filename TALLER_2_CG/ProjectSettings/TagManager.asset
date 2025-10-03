@@ -7,6 +7,7 @@ TagManager:
   - Ground
   - Block
   - Golpe
+  - Lava
   layers:
   - Default
   - TransparentFX
@@ -16,8 +17,8 @@ TagManager:
   - UI
   - Jugador
   - Enemigo
-  - 
-  - 
+  - Objeto
+  - Lava
   - 
   - 
   - 
@@ -46,6 +47,9 @@ TagManager:
     locked: 0
   - name: fondo
     uniqueID: 216016109
+    locked: 0
+  - name: Objeto
+    uniqueID: 4247822667
     locked: 0
   - name: enemigo
     uniqueID: 2948019903
