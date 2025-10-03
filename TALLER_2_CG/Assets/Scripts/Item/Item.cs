@@ -5,6 +5,7 @@ public class Item : MonoBehaviour
     public string nombre;
     public int puntos;
     public bool otorgaVida;
+    
     public GameObject efectoFeedback; 
 
     private void OnTriggerEnter2D(Collider2D otro)
