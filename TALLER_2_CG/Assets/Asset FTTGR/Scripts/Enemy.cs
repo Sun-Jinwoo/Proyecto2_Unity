@@ -17,7 +17,7 @@ public class Enemy : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            ((GameControllerBosque)GameControllerBosque.Instance).PlayerTakeDamage(1);
+            GameControllerBosque.Instancia.PlayerTakeDamage(1);
         }
     }
 }

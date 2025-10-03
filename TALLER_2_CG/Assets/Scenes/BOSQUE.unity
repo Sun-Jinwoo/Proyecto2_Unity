@@ -6924,9 +6924,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 1350696102}
     m_Modifications:
     - target: {fileID: 4370641799395154665, guid: 8851a1e64f46c0447a77225567d4dafa, type: 3}
+      propertyPath: puntos
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370641799395154665, guid: 8851a1e64f46c0447a77225567d4dafa, type: 3}
       propertyPath: efectoFeedback
       value: 
-      objectReference: {fileID: 1219507109601310, guid: 26623e9723fed51408979b691935514d, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6739313674417377716, guid: 8851a1e64f46c0447a77225567d4dafa, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -7054,7 +7058,7 @@ PrefabInstance:
     - target: {fileID: 8708107037632529877, guid: 8cf18a1428f8fa849b1ceb5cbd7301bd, type: 3}
       propertyPath: efectoFeedback
       value: 
-      objectReference: {fileID: 5198137156680126092, guid: 486408109a7fee040909c8ef295e423f, type: 3}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7118,7 +7122,7 @@ PrefabInstance:
     - target: {fileID: 6838837630946446388, guid: 19708cea3039fbc4595188d224a687e8, type: 3}
       propertyPath: efectoFeedback
       value: 
-      objectReference: {fileID: 5198137156680126092, guid: 486408109a7fee040909c8ef295e423f, type: 3}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

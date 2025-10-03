@@ -80,7 +80,6 @@
     <Compile Include="Assets\Scripts\Camara\CamaraController.cs" />
     <Compile Include="Assets\Scripts\GameControllerBosque.cs" />
     <Compile Include="Assets\Scripts\Camara\SeguirJugadorCamara.cs" />
-    <Compile Include="Assets\Asset FTTGR\Scripts\GameControllerBosque.cs" />
     <Compile Include="Assets\Asset FTTGR\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\Item\Item.cs" />
     <Compile Include="Assets\Scripts\Player\MovimientoJugador.cs" />

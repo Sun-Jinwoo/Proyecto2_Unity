@@ -1,7 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
-using TMPro;  
+using TMPro;
+using System;
 
 public class GameControllerBosque : MonoBehaviour
 {
@@ -46,5 +47,10 @@ public class GameControllerBosque : MonoBehaviour
     {
         vidas -= cantidad;
         textoVidas.text = "Vidas: " + vidas;
+    }
+
+    internal void PlayerTakeDamage(int v)
+    {
+        throw new NotImplementedException();
     }
 }
