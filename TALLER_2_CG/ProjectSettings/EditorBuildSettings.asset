@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MENU.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/Scenes/Muerte.unity
-    guid: b6c5d430e64fd8e4689dd6b8d0e457a1
-  - enabled: 1
     path: Assets/Scenes/PUEBLO.unity
     guid: cde87cee54588a949ae1466d3b58ba50
   - enabled: 1
@@ -23,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LAVA.unity
     guid: 2078433cb4ead3f4681e46859addbdec
+  - enabled: 1
+    path: Assets/Scenes/Muerte.unity
+    guid: b6c5d430e64fd8e4689dd6b8d0e457a1
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
