@@ -5,27 +5,49 @@ public class Item : MonoBehaviour
     public string nombre;
     public int puntos;
     public bool otorgaVida;
-    
-    public GameObject efectoFeedback; 
+
+    public float tiempoExtra = 5f; // Valor por defecto, puedes cambiarlo en el inspector
+
+    public enum TipoItem { Puntos, RelojPositivo, RelojNegativo }
+    public TipoItem tipo = TipoItem.Puntos;
+
+    public GameObject efectoFeedback;
 
     private void OnTriggerEnter2D(Collider2D otro)
     {
         if (otro.CompareTag("Player"))
         {
-            if (otorgaVida)
+            switch (tipo)
             {
-                GameControllerBosque.Instancia.SumarVidaJugador(1);
+                case TipoItem.Puntos:
+                    GameControllerBosque.Instancia.AgregarItem(gameObject.name, puntos);
+                    break;
+
+                case TipoItem.RelojPositivo:
+                    GameControllerBosque.Instancia.SumarTiempo(tiempoExtra);
+                    break;
+
+                case TipoItem.RelojNegativo:
+                    GameControllerBosque.Instancia.SumarTiempo(-tiempoExtra);
+                    break;
             }
-
-            GameControllerBosque.Instancia.AgregarItem(nombre, puntos);
-
-            
-            if (efectoFeedback != null)
+            if (otro.CompareTag("Player"))
             {
-                Instantiate(efectoFeedback, transform.position, Quaternion.identity);
-            }
+                if (otorgaVida)
+                {
+                    GameControllerBosque.Instancia.SumarVidaJugador(1);
+                }
 
-            Destroy(gameObject);
+                GameControllerBosque.Instancia.AgregarItem(nombre, puntos);
+
+
+                if (efectoFeedback != null)
+                {
+                    Instantiate(efectoFeedback, transform.position, Quaternion.identity);
+                }
+
+                Destroy(gameObject);
+            }
         }
     }
 }

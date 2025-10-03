@@ -51,7 +51,20 @@ public class GameControllerBosque : MonoBehaviour
         textoVidas.text = "Vidas: " + vidas;
     }
 
+    public void SumarTiempo(float segundos)
+{
+    tiempo += segundos;
+    if (tiempo < 0) tiempo = 0; // Evita que el tiempo quede en negativo
+    textoTiempo.text = "Tiempo: " + tiempo.ToString("F1");
+}
+
+
     internal void PlayerTakeDamage(int v)
+    {
+        throw new NotImplementedException();
+    }
+
+    internal void SumarTiempo(object tiempoExtra)
     {
         throw new NotImplementedException();
     }
