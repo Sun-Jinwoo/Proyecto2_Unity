@@ -1,5 +1,6 @@
 using JetBrains.Annotations;
 using UnityEngine;
+using System.Collections;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class PlayerMovement : MonoBehaviour
 
     private bool takeD = false;
     public float dirGolpe;
+    public int health = 5;
+    public int damage = 1;
 
     void Start()
     {
@@ -80,29 +83,48 @@ public class PlayerMovement : MonoBehaviour
     {
         Debug.Log("Player Attacks!");
         attacking = true;
+        Invoke("stopAttack", 0.7f);
     }
     private void stopAttack()
     {
         attacking = false;
     }
-
-    public void TakeDamage()
-    {
-        Debug.Log("Player Takes Damage!");
-        if (!takeD)
-        {
-            Debug.Log("Player Takes Damage 2!");
-            takeD = true;
-            Vector2 push = new Vector2(transform.position.x - dirGolpe, 5f).normalized;
-            RB2D.AddForce(push * 5f, ForceMode2D.Impulse);
-        }
-    }
-
     public void StopTakeDamage()
     {
         takeD = false;
         RB2D.linearVelocity = Vector2.zero;
     }
+
+    public void TakeDamage(int damage, float golpeX)
+    {
+        if (!takeD)
+        {
+            takeD = true;
+            health -= 1;
+            Debug.Log("player health: " + health);
+            Vector2 push = new Vector2(transform.position.x - golpeX, 70f).normalized;
+            RB2D.AddForce(push * 5f, ForceMode2D.Impulse);
+
+            //animator.SetTrigger("Hurt");
+            if (health <= 0)
+            {
+                Die();
+            }
+            else
+            {
+                StartCoroutine(DesactivateDamage());
+            }
+        }
+    }
+
+    private void Die()
+    {
+        animator.SetTrigger("Death");
+        RB2D.linearVelocity = Vector2.zero;
+        this.enabled = false; // evita más inputs
+        StartCoroutine(LoadDeathScene());
+    }
+
 
     void FixedUpdate()
     {
@@ -113,6 +135,16 @@ public class PlayerMovement : MonoBehaviour
     private void Jump()
     {
         RB2D.AddForce(Vector2.up*jumpForce);
+    }
+    IEnumerator DesactivateDamage()
+    {
+        yield return new WaitForSeconds(0.8f);
+        takeD = false;
+    }
+    private IEnumerator LoadDeathScene()
+    {
+        yield return new WaitForSeconds(1f);
+        UnityEngine.SceneManagement.SceneManager.LoadScene("ScoreScene");
     }
 }
 
